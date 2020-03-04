@@ -1,3 +1,3 @@
 # chartJS-basic
 
-![]{graph.png}
+![](graph.png)
