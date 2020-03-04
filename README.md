@@ -1,1 +1,3 @@
 # chartJS-basic
+
+![]{graph.png}
