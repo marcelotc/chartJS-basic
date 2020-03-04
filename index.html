@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </link>
+    <title>chart</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize= 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+
+        let massPopChart = new Chart(myChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Boston', 'Wprcest', 'Spcirngeil', 'Lowel', 'Cambrisge', 'NEw bradfor'],
+                datasets: [{
+                    label: 'Population',
+                    data: [
+                        21323,
+                        311111,
+                        54545,
+                        99434,
+                        34343,
+                        34341
+                    ],
+                    backgroundColor: ['red','green', 'blue', 'yellow','black', 'purple'],
+                    borderWidth: 1,
+                    borderColor: 'black',
+                    hoverBorderWidth: 5,
+                    hoverBorderColor: 'black'
+
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Largest cities in Massachussets',
+                    fontSize: 25
+                },
+                legend: {
+                    //display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: 'black'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    //enabled: false
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
